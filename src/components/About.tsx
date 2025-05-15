@@ -1,5 +1,6 @@
 "use client";
 
+import { skills } from "@/data/skills";
 import { motion } from "framer-motion";
 import { Download, ExternalLink } from "lucide-react";
 
@@ -36,18 +37,7 @@ export default function About() {
 
         {/* Skills */}
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {[
-            "React",
-            "Next.js",
-            "React Native",
-            "Node.js",
-            "TypeScript",
-            "PostgreSQL",
-            "MongoDB",
-            "Python",
-            "GCP",
-            "AWS",
-          ].map((skill, index) => (
+          {skills.map((skill, index) => (
             <motion.div
               key={skill}
               className="bg-accent/10 text-accent py-2 px-4 rounded-full text-sm font-medium"
